@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, Image, TouchableOpacity, TextInput, Text, Platform, Pressable, Alert, ScrollView, KeyboardAvoidingView } from 'react-native';
 import DateTimePicker, { DateTimePickerEvent, DateTimePickerAndroid } from '@react-native-community/datetimepicker';
+import { router } from 'expo-router';
 
 const AttendeeProfile = () => {
     // State management
@@ -55,6 +56,8 @@ const AttendeeProfile = () => {
 
     const submitForm = () => {
         console.log("Form submitted successfully");
+        // TESTING FOR UI PURPOSES
+        router.push("/(auth)/OrganizerProfile")
     };
 
     return (
